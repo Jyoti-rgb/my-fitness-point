@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Importing components for each section
 import Home from './components/Home';
@@ -12,6 +13,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
+import RegistrationForm from './components/RegistrationForm';
 
 // Main App component
 function App() {
@@ -28,6 +30,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/registrationForm" element={<RegistrationForm />} />
         </Routes>
         <Footer />
       </div>
@@ -72,6 +75,7 @@ function Header() {
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/registrationForm">RegistrationForm</Link></li>
           </ul>
         </nav>
       </header>
