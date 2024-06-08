@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -30,75 +31,65 @@ const RegistrationForm = () => {
     <div style={containerStyle}>
       <form onSubmit={handleSubmit}>
         <h4 className="text-warning text-center pt-5">Registration Page</h4>
-        
+
         <label style={labelStyle}>
-          <input 
-            type="text" 
-            style={inputStyle} 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
+          <input
+            type="text"
+            style={inputStyle}
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
             placeholder="EMAIL"
           />
           <div style={lineBoxStyle}>
             <div style={lineStyle}></div>
           </div>
         </label>
-        
+
         <label style={labelStyle}>
-          <input 
-            type="text" 
-            style={inputStyle} 
-            name="username" 
-            value={formData.username} 
-            onChange={handleChange} 
+          <input
+            type="text"
+            style={inputStyle}
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
             placeholder="USERNAME"
           />
           <div style={lineBoxStyle}>
             <div style={lineStyle}></div>
           </div>
         </label>
-        
+
         <label style={labelStyle}>
-          <input 
-            type="password" 
-            style={inputStyle} 
-            name="password" 
-            value={formData.password} 
-            onChange={handleChange} 
+          <input
+            type="password"
+            style={inputStyle}
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
             placeholder="PASSWORD"
           />
           <div style={lineBoxStyle}>
             <div style={lineStyle}></div>
           </div>
         </label>
-        
+
         <label style={labelStyle}>
-          <input 
-            type="password" 
-            style={inputStyle} 
-            name="confirm" 
-            value={formData.confirm} 
-            onChange={handleChange} 
+          <input
+            type="password"
+            style={inputStyle}
+            name="confirm"
+            value={formData.confirm}
+            onChange={handleChange}
             placeholder="CONFIRM PASSWORD"
           />
           <div style={lineBoxStyle}>
             <div style={lineStyle}></div>
           </div>
         </label>
-        
-        <button style={buttonStyle} type="submit">Submit</button>
-      </form>
 
-      {/* Display registered users
-      <div>
-        <h6>Registered Users:</h6>
-        <ul>
-          {users.map((user, index) => (
-            <li key={index}>{JSON.stringify(user)}</li>
-          ))}
-        </ul>
-      </div> */}
+        <button style={buttonStyle} type="submit">Register</button>
+        <p>Already have an account? <Link to="/loginForm">Login here</Link></p>      </form>
     </div>
   );
 };
