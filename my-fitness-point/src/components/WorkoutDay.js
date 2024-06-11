@@ -45,38 +45,39 @@ const workouts = {
   // Add more days if needed
 };
 
-
 function WorkoutDay() {
   const { day } = useParams();
   const workout = workouts[day];
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>{workout.title}</h1>
-      <section style={{ marginBottom: '20px' }}>
-        <h2>Warm-Up</h2>
-        <ul>
-          {workout.warmup.map((exercise, index) => (
-            <li key={index}>{exercise}</li>
-          ))}
-        </ul>
-      </section>
-      <section style={{ marginBottom: '20px' }}>
-        <h2>Main Workout</h2>
-        <ul>
-          {workout.main.map((exercise, index) => (
-            <li key={index}>{exercise}</li>
-          ))}
-        </ul>
-      </section>
-      <section style={{ marginBottom: '20px' }}>
-        <h2>Cool-Down</h2>
-        <ul>
-          {workout.cooldown.map((exercise, index) => (
-            <li key={index}>{exercise}</li>
-          ))}
-        </ul>
-      </section>
+    <div style={{ backgroundColor: 'blue', minHeight: '93vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div>
+        <h1>{workout.title}</h1>
+        <section style={{ marginBottom: '20px' }}>
+          <h2>Warm-Up</h2>
+          <ul>
+            {workout.warmup.map((exercise, index) => (
+              <li key={index}>{exercise}</li>
+            ))}
+          </ul>
+        </section>
+        <section style={{ marginBottom: '20px' }}>
+          <h2>Main Workout</h2>
+          <ul>
+            {workout.main.map((exercise, index) => (
+              <li key={index}>{exercise}</li>
+            ))}
+          </ul>
+        </section>
+        <section style={{ marginBottom: '20px' }}>
+          <h2>Cool-Down</h2>
+          <ul>
+            {workout.cooldown.map((exercise, index) => (
+              <li key={index}>{exercise}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </div>
   );
 }

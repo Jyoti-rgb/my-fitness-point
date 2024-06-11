@@ -46,7 +46,7 @@ function WorkoutOverview() {
       <h1>Seven-Day Workout Plan</h1>
       <div className="workout-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', justifyContent: 'center' }}>
         {workoutDays.map((day, index) => (
-          <div key={index} className="workout-card" style={{ backgroundColor: day.color, padding: '20px', borderRadius: '10px', textAlign: 'center' }}>
+          <div key={index} className="workout-card" style={{ backgroundColor: day.color, padding: '20px', borderRadius: '10px', textAlign: 'center', transition: 'box-shadow 0.3s ease' }}>
             <Link to={`/seven-day-workout/day/${day.day}`} style={{ textDecoration: 'none', color: '#fff' }}>
               <h2>Day {day.day}</h2>
               <p>{day.title}</p>
