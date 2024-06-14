@@ -35,7 +35,7 @@ function Header() {
     <>
       <header style={{ background: '#ffffff', borderBottom: '2px solid #dee2e6', padding: '15px 30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <img src="/sun.png" alt="logo" style={{ width: '40px', height: '40px', marginRight: '10px' }} />
-        <h1 style={{ fontFamily: 'Georgia, serif', margin: 0, fontSize: '24px', fontWeight: 'bold', color: '#495057' }}>MyFitnessPoint</h1>
+        <h1 style={{ fontFamily: 'Georgia, serif', marginRight: '950px',alignItems: 'center', fontSize: '24px', fontWeight: 'bold', color: '#495057' }}>MyFitnessPoint</h1>
         <nav>
           <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0 }}>
             <li style={{ margin: '0 15px' }}><Link to="/" style={{ textDecoration: 'none', color: '#495057' }}>Home</Link></li>
