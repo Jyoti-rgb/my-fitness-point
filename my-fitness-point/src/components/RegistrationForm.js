@@ -28,77 +28,80 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div style={containerStyle}>
-      <form onSubmit={handleSubmit}>
-        <h4 className="text-warning text-center pt-5">Registration Page</h4>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
 
-        <label style={labelStyle}>
-          <input
-            type="text"
-            style={inputStyle}
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="EMAIL"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
+      <div style={containerStyle}>
+        <form onSubmit={handleSubmit}>
+          <h4 className="text-warning text-center pt-5">Registration Page</h4>
 
-        <label style={labelStyle}>
-          <input
-            type="text"
-            style={inputStyle}
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            placeholder="USERNAME"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
+          <label style={labelStyle}>
+            <input
+              type="text"
+              style={inputStyle}
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="EMAIL"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
 
-        <label style={labelStyle}>
-          <input
-            type="password"
-            style={inputStyle}
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            placeholder="PASSWORD"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
+          <label style={labelStyle}>
+            <input
+              type="text"
+              style={inputStyle}
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              placeholder="USERNAME"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
 
-        <label style={labelStyle}>
-          <input
-            type="password"
-            style={inputStyle}
-            name="confirm"
-            value={formData.confirm}
-            onChange={handleChange}
-            placeholder="CONFIRM PASSWORD"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
+          <label style={labelStyle}>
+            <input
+              type="password"
+              style={inputStyle}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="PASSWORD"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
 
-        <button style={buttonStyle} type="submit">Register</button>
-        <p>Already have an account? <Link to="/loginForm">Login here</Link></p>      </form>
+          <label style={labelStyle}>
+            <input
+              type="password"
+              style={inputStyle}
+              name="confirm"
+              value={formData.confirm}
+              onChange={handleChange}
+              placeholder="CONFIRM PASSWORD"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
+
+          <button style={buttonStyle} type="submit">Register</button>
+          <p>Already have an account? <Link to="/loginForm">Login here</Link></p>      </form>
+      </div>
     </div>
   );
 };
 
 const containerStyle = {
-  width: '30%',
-  margin: '60px auto',
+  width: '50%',
+  margin: '-15px auto',
   background: '#efefef',
-  padding: '60px 120px 80px 120px',
+  padding: '80px 120px', // Adjusted padding
   textAlign: 'center',
   boxShadow: '2px 2px 3px rgba(0,0,0,0.1)',
 };

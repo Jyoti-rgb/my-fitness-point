@@ -38,12 +38,17 @@ function WorkoutOverview() {
       title: "Core",
       color: "#F4A261",
       quote: "Strong core, strong body."
-    }
+    },
+    { day: 7, title: 'Cardio Blast', quote: 'Push yourself because no one else is going to do it for you.', color: '#fca3b7' },
+    { day: 8, title: 'Strength Training', quote: 'The only bad workout is the one that didn’t happen.', color: '#a6c1ee' },
+    { day: 9, title: 'Flexibility Focus', quote: 'Strive for progress, not perfection.', color: '#fbc2eb' },
+    { day: 13, title: 'Rest Day', quote: 'Rest and recover, your body will thank you.', color: '#BFBFBF' },
+
   ];
 
   return (
-    <div className="WorkoutOverview">
-      <h1>Seven-Day Workout Plan</h1>
+    <div className="WorkoutOverview" style={{ background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)' }}>
+      <h1 style={{ textAlign: 'center', color: '#fff' }}>Seven-Day Workout Plan</h1>
       <div className="workout-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', justifyContent: 'center' }}>
         {workoutDays.map((day, index) => (
           <div key={index} className="workout-card" style={{ backgroundColor: day.color, padding: '20px', borderRadius: '10px', textAlign: 'center', transition: 'box-shadow 0.3s ease' }}>

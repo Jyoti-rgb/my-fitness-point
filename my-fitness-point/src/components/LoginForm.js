@@ -7,7 +7,7 @@ const LoginForm = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    
+
     // Simple form validation
     if (!email || !password) {
       setErrorMessage('Please fill in both fields.');
@@ -37,47 +37,50 @@ const LoginForm = () => {
   };
 
   return (
-    <div style={containerStyle}>
-      <form onSubmit={handleLogin}>
-        <h4 className="text-warning text-center pt-5">Login Page</h4>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px' }}>
 
-        <label style={labelStyle}>
-          <input
-            type="email"
-            style={inputStyle}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="EMAIL"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
+      <div style={containerStyle}>
+        <form onSubmit={handleLogin}>
+          <h4 className="text-warning text-center pt-5">Login Page</h4>
 
-        <label style={labelStyle}>
-          <input
-            type="password"
-            style={inputStyle}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="PASSWORD"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
+          <label style={labelStyle}>
+            <input
+              type="email"
+              style={inputStyle}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="EMAIL"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
 
-        <button style={buttonStyle} type="submit">Login</button>
-      </form>
+          <label style={labelStyle}>
+            <input
+              type="password"
+              style={inputStyle}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="PASSWORD"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
+
+          <button style={buttonStyle} type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 };
 
 const containerStyle = {
-  width: '30%',
-  margin: '60px auto',
+  width: '50%',
+  margin: '5px auto',
   background: '#efefef',
-  padding: '60px 120px 80px 120px',
+  padding: '80px 120px', // Adjusted padding
   textAlign: 'center',
   boxShadow: '2px 2px 3px rgba(0,0,0,0.1)',
 };

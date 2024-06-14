@@ -34,80 +34,84 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={containerStyle}>
-      <form onSubmit={handleSubmit}>
-        <h4 className="text-warning text-center pt-5">Contact Us</h4>
-        
-        <label style={labelStyle}>
-          <input 
-            type="text" 
-            style={inputStyle} 
-            name="name" 
-            value={formData.name} 
-            onChange={handleChange} 
-            placeholder="NAME"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
-        
-        <label style={labelStyle}>
-          <input 
-            type="email" 
-            style={inputStyle} 
-            name="email" 
-            value={formData.email} 
-            onChange={handleChange} 
-            placeholder="EMAIL"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
-        
-        <label style={labelStyle}>
-          <input 
-            type="text" 
-            style={inputStyle} 
-            name="subject" 
-            value={formData.subject} 
-            onChange={handleChange} 
-            placeholder="SUBJECT"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
-        
-        <label style={labelStyle}>
-          <textarea 
-            style={textareaStyle} 
-            name="message" 
-            value={formData.message} 
-            onChange={handleChange} 
-            placeholder="MESSAGE"
-          />
-          <div style={lineBoxStyle}>
-            <div style={lineStyle}></div>
-          </div>
-        </label>
-        
-        <button style={{ ...buttonStyle, background: buttonColor }} type="submit">Send Message</button>
-        <p>Need more help? <Link to="/faq">Visit our FAQ</Link></p>
-      </form>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+
+      <div style={containerStyle}>
+        <form onSubmit={handleSubmit}>
+          <h4 className="text-warning text-center pt-5">Contact Us</h4>
+
+          <label style={labelStyle}>
+            <input
+              type="text"
+              style={inputStyle}
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="NAME"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
+
+          <label style={labelStyle}>
+            <input
+              type="email"
+              style={inputStyle}
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="EMAIL"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
+
+          <label style={labelStyle}>
+            <input
+              type="text"
+              style={inputStyle}
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="SUBJECT"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
+
+          <label style={labelStyle}>
+            <textarea
+              style={textareaStyle}
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="MESSAGE"
+            />
+            <div style={lineBoxStyle}>
+              <div style={lineStyle}></div>
+            </div>
+          </label>
+
+          <button style={{ ...buttonStyle, background: buttonColor }} type="submit">Send Message</button>
+          <p>Need more help? <Link to="/faq">Visit our FAQ</Link></p>
+        </form>
+      </div>
     </div>
   );
 };
 
 const containerStyle = {
-  width: '30%',
-  margin: '60px auto',
+  width: '50%',
+  margin: '5px auto',
   background: '#efefef',
-  padding: '60px 120px 80px 120px',
+  padding: '80px 120px', // Adjusted padding
   textAlign: 'center',
   boxShadow: '2px 2px 3px rgba(0,0,0,0.1)',
 };
+
 
 const labelStyle = {
   display: 'block',
