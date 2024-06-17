@@ -23,7 +23,7 @@ function Home() {
   ];
 
   return (
-    <div className="Home" style={{ textAlign: 'center', fontFamily: '' }}>
+    <div className="Home" style={{ textAlign: 'center', fontFamily: '',background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', }}>
       <style>{keyframes}</style>
       {/* <h1 style={{ animation: 'colorChange 5s infinite', marginBottom: '20px' }}>Welcome to My Fitness Point</h1>
       <p style={{ animation: 'colorChange 5s infinite' }}>Join us and start your fitness journey today!</p> */}

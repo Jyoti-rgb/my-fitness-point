@@ -34,7 +34,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+    <div style={{ minHeight: '89vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
 
       <div style={containerStyle}>
         <form onSubmit={handleSubmit}>

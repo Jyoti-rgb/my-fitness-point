@@ -28,7 +28,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+    <div style={{ minHeight: '89vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
 
       <div style={containerStyle}>
         <form onSubmit={handleSubmit}>
@@ -91,7 +91,8 @@ const RegistrationForm = () => {
           </label>
 
           <button style={buttonStyle} type="submit">Register</button>
-          <p>Already have an account? <Link to="/loginForm">Login here</Link></p>      </form>
+          <p>Already have an account? <Link to="/loginForm">Login here</Link></p>
+        </form>
       </div>
     </div>
   );

@@ -1,46 +1,27 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const LoginForm = () => {
+const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleLogin = async (event) => {
+  const handleLoginSubmit = (event) => {
     event.preventDefault();
-
     // Simple form validation
     if (!email || !password) {
       setErrorMessage('Please fill in both fields.');
       return;
     }
-
-    // Mock login function
-    const mockLogin = (email, password) => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (email === 'user@example.com' && password === 'password') {
-            resolve('Login successful!');
-          } else {
-            reject('Invalid email or password.');
-          }
-        }, 1000);
-      });
-    };
-
-    try {
-      const response = await mockLogin(email, password);
-      alert(response);
-      setErrorMessage('');
-    } catch (error) {
-      setErrorMessage(error);
-    }
+    // Call onLogin to update login state in the parent component
+    onLogin(); // Assuming this updates the isLoggedIn state
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px' }}>
+    <div style={{ minHeight: '89vh', background: 'linear-gradient(to right, #fbc2eb, #a6c1ee)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px' }}>
 
       <div style={containerStyle}>
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLoginSubmit}>
           <h4 className="text-warning text-center pt-5">Login Page</h4>
 
           <label style={labelStyle}>
@@ -70,6 +51,8 @@ const LoginForm = () => {
           </label>
 
           <button style={buttonStyle} type="submit">Login</button>
+          <p>Don't have an account? <Link to="/registrationForm">Register here</Link></p>
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
         </form>
       </div>
     </div>
